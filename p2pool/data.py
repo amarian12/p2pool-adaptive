@@ -1,4 +1,4 @@
-from __future__ import divisionif (self.header['previous_block']
+from __future__ import division
 
 import hashlib
 import os
