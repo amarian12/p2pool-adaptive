@@ -19,7 +19,7 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**32 - 1
 PERSIST = True
 WORKER_PORT = 8670
-BOOTSTRAP_ADDRS = 'p2tit.mupool.com 54.69.255.233 54.186.125.35'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net p2tit.mupool.com 54.69.255.233 54.186.125.35'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-tit'
 VERSION_CHECK = lambda v: 50700 <= v < 60000 or 60010 <= v < 60100 or 60400 <= v
 VERSION_WARNING = lambda v: 'Upgrade titcoin to >=0.8.5!' if v < 80500 else None
