@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = False
 WORKER_PORT = 27100
-BOOTSTRAP_ADDRS = 'dutchpool.org'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net dutchpool.org'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: True

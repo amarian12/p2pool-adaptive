@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 8810
-BOOTSTRAP_ADDRS = 'xpool.net us-east1.cryptovein.com'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net xpool.net us-east1.cryptovein.com'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-dgc'
 VERSION_CHECK = lambda v: True

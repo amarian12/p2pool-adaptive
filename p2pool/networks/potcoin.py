@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 8989
-BOOTSTRAP_ADDRS = 'p2pool.name:8420 us-east1.cryptovein.com:8420 pool.orgcoin.org:8420 xpool.net:8420 p2poolmining.pl:8420'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net p2pool.name:8420 us-east1.cryptovein.com:8420 pool.orgcoin.org:8420 xpool.net:8420 p2poolmining.pl:8420'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-pot'
 VERSION_CHECK = lambda v: True

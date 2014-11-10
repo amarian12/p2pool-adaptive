@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = False
 WORKER_PORT = 8923
-BOOTSTRAP_ADDRS = '107.170.35.84 note.validerrorpool.com dnotespool.com note.charityminingpools.com dnote.poolnetwork.org'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net 107.170.35.84 note.validerrorpool.com dnotespool.com note.charityminingpools.com dnote.poolnetwork.org'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: True

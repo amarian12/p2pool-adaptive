@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**32 - 1
 PERSIST = False
 WORKER_PORT = 9179
-BOOTSTRAP_ADDRS = 'p2pool-west.eCurrency.io p2pool-central.eCurrency.io p2pool-nyc.eCurrency.io p2pool-zurich.eCurrency.io rav3n.dtdns.net pool.hostv.pl p2pool.org solidpool.org taken.pl'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net p2pool-west.eCurrency.io p2pool-central.eCurrency.io p2pool-nyc.eCurrency.io p2pool-zurich.eCurrency.io rav3n.dtdns.net pool.hostv.pl p2pool.org solidpool.org taken.pl'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: True

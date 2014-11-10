@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 8830
-BOOTSTRAP_ADDRS = 'crc.xpool.net:23630 p2pool.org craftcoin.treasurequarry.com crc.prominer.org us-east1.cryptovein.com'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net crc.xpool.net:23630 p2pool.org craftcoin.treasurequarry.com crc.prominer.org us-east1.cryptovein.com'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-crc'
 VERSION_CHECK = lambda v: True

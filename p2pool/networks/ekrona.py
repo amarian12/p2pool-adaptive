@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 8950
-BOOTSTRAP_ADDRS = 'p2pool-eu.gotgeeks.com:8344 p2pool-us.gotgeeks.com:8344 rav3n.dtdns.net:8344 taken.pl:8344'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net p2pool-eu.gotgeeks.com:8344 p2pool-us.gotgeeks.com:8344 rav3n.dtdns.net:8344 taken.pl:8344'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: True

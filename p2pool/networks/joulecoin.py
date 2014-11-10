@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**32 - 1
 PERSIST = True
 WORKER_PORT = 8930
-BOOTSTRAP_ADDRS = 'rav3n.dtdns.net:7844 bit.usr.sh:7844'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net rav3n.dtdns.net:7844 bit.usr.sh:7844'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: True

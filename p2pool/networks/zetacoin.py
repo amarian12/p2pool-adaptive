@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**32 - 1
 PERSIST = True
 WORKER_PORT = 8920
-BOOTSTRAP_ADDRS = '146.185.171.176:9174 79.2.130.60:9174 23.253.81.150:9174 p2pool-eu.gotgeeks.com p2pool-us.gotgeeks.com rav3n.dtdns.net doge.dtdns.net pool.hostv.pl p2pool.org p2pool.gotgeeks.com p2pool.dtdns.net solidpool.org'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net 146.185.171.176:9174 79.2.130.60:9174 23.253.81.150:9174 p2pool-eu.gotgeeks.com p2pool-us.gotgeeks.com rav3n.dtdns.net doge.dtdns.net pool.hostv.pl p2pool.org p2pool.gotgeeks.com p2pool.dtdns.net solidpool.org'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-zet'
 VERSION_CHECK = lambda v: True

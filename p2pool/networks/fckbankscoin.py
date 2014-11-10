@@ -13,7 +13,7 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True #this value tells the p2pool if it should mine solo or connect to other p2pools.
 WORKER_PORT = 19334
-BOOTSTRAP_ADDRS = 'hashattack.com b1czu.sytes.net 37.139.19.246'.split(' ') #here we need to add working p2pool fck nodes to allow others connecting
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net hashattack.com b1czu.sytes.net 37.139.19.246'.split(' ') #here we need to add working p2pool fck nodes to allow others connecting
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: 10000 <= v
 VERSION_WARNING = lambda v: 'Upgrade FCKbankscoin to >=1.0.0.0!' if v < 10000 else None

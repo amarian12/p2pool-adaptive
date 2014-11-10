@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**32 - 1
 PERSIST = True
 WORKER_PORT = 8967
-BOOTSTRAP_ADDRS = 'pool.broketech.tk:26661 24.10.44.25:35159 89.1.29.161:49367'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net pool.broketech.tk:26661 24.10.44.25:35159 89.1.29.161:49367'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: True

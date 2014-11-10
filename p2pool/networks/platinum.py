@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**32 - 1
 PERSIST = False
 WORKER_PORT = 8926
-BOOTSTRAP_ADDRS = 'pool.webcoin.us pt.hiive.biz pt.ispace.co.uk'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net pool.webcoin.us pt.hiive.biz pt.ispace.co.uk'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: True

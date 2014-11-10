@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**32 - 1
 PERSIST = True
 WORKER_PORT = 8980
-BOOTSTRAP_ADDRS = 'japool.com:13432 rav3n.dtdns.net:7432 '.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net japool.com:13432 rav3n.dtdns.net:7432 '.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-asc'
 VERSION_CHECK = lambda v: True

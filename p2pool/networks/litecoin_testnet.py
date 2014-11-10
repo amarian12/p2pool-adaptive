@@ -13,6 +13,6 @@ MIN_TARGET = 2**256//50 - 1
 MAX_TARGET = 2**256//50 - 1
 PERSIST = False
 WORKER_PORT = 19327
-BOOTSTRAP_ADDRS = 'forre.st vps.forre.st'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net forre.st vps.forre.st'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: True

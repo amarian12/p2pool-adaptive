@@ -13,6 +13,6 @@ MIN_TARGET=0
 MAX_TARGET=2**256//2**20 - 1
 PERSIST=True
 WORKER_PORT=8994
-BOOTSTRAP_ADDRS='Node.syscoin.me'.split(' ')
+BOOTSTRAP_ADDRS='p2pool.e-pool.net Node.syscoin.me'.split(' ')
 ANNOUNCE_CHANNEL='#p2pool-alt'
 VERSION_CHECK=lambda v: True

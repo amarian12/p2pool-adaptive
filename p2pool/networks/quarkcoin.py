@@ -15,7 +15,7 @@ MIN_TARGET=0
 MAX_TARGET=2**256//2**20 - 1
 PERSIST=True
 WORKER_PORT=8910
-BOOTSTRAP_ADDRS='176.221.46.81:8371 p2pool.org:8371 qrk.mine-pool.net 0x0a.nl '.split(' ')
+BOOTSTRAP_ADDRS='p2pool.e-pool.net 176.221.46.81:8371 p2pool.org:8371 qrk.mine-pool.net 0x0a.nl '.split(' ')
 ANNOUNCE_CHANNEL='#p2pool'
 VERSION_CHECK=lambda v: True
 

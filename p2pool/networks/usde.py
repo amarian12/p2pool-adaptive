@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 8860
-BOOTSTRAP_ADDRS = 'p2pool-eu.gotgeeks.com:8448 p2pool-us.gotgeeks.com:8448 rav3n.dtdns.net:8448 p2pool.gotgeeks.com:8448 p2pool.dndns.net:8448 solidpool.org:8448'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net p2pool-eu.gotgeeks.com:8448 p2pool-us.gotgeeks.com:8448 rav3n.dtdns.net:8448 p2pool.gotgeeks.com:8448 p2pool.dndns.net:8448 solidpool.org:8448'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: True

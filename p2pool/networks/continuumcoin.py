@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**32 - 1
 PERSIST = False
 WORKER_PORT = 8936
-BOOTSTRAP_ADDRS = 'pool.broketech.tk:7983 192.227.238.236:7983 ctm.unhinged.tk ctm.ispace.co.uk ctm.cryptohub.org ctm.coinpool.de  '.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net pool.broketech.tk:7983 192.227.238.236:7983 ctm.unhinged.tk ctm.ispace.co.uk ctm.cryptohub.org ctm.coinpool.de  '.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: True

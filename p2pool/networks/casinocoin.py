@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = True
 WORKER_PORT = 8840
-BOOTSTRAP_ADDRS = 'csc.xpool.net:23640 casinocoin.mooo.com:23640 csc-useast.xpool.net:23640 bigiron.homelinux.com:23640 csc.hash.so:23640 csc.squiggie.com:23640 p2pool.org:23640 pool.hostv.pl:23640 rav3n.dtdns.net:23640 p2pool-us.gotgeeks.com:23640 p2pool-eu.gotgeeks.com:23640 '.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net csc.xpool.net:23640 casinocoin.mooo.com:23640 csc-useast.xpool.net:23640 bigiron.homelinux.com:23640 csc.hash.so:23640 csc.squiggie.com:23640 p2pool.org:23640 pool.hostv.pl:23640 rav3n.dtdns.net:23640 p2pool-us.gotgeeks.com:23640 p2pool-eu.gotgeeks.com:23640 '.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-csc'
 VERSION_CHECK = lambda v: True

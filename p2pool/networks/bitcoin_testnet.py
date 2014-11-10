@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**32 - 1
 PERSIST = False
 WORKER_PORT = 19332
-BOOTSTRAP_ADDRS = 'forre.st vps.forre.st liteco.in'.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net forre.st vps.forre.st liteco.in'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: 50700 <= v < 60000 or 60010 <= v < 60100 or 60400 <= v
