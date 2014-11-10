@@ -1,0 +1,30 @@
+var config = {
+  // specify your personal payment addresses
+  myself : [
+    "1Fi7YbpTYjHynUqbh1vwPcAqAqwQzeC1gw"
+  ],
+
+  // specify a name for this node
+  node_name : "bitcoin.ramosresearch.com:9332",
+
+  // data reload interval in seconds
+  reload_interval : 60,
+
+  // chart reload interval in seconds
+  reload_chart_interval : 600,
+
+  // allow conversion of bitcoin amounts into USD
+  convert_bitcoin_to_usd: true,
+
+  // misc UI options
+  show_github_ribbon: true,
+  enable_audio: true,
+
+  // custom HTML to load
+  header_url : "header.html",
+  footer_url : "footer.html",
+  ad_url :     "",
+
+  // address for donations
+  donation_address : "1Fi7YbpTYjHynUqbh1vwPcAqAqwQzeC1gw"
+}

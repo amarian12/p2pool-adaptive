@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <title>P2Pool Node Status - Graphs</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <script type="text/javascript" src="d3.v2.min.js"></script>
+
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-dateFormat.min.js"></script>
+
+    <script src="js/util.js"></script>
+    <script src="js/charts.js"></script>
+
+    <script src="js/config.json"></script>
+    <script src="js/init.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/p2pool-node-status.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+    <body>
+      <div id='header'></div>
+
+      <div class="container">
+        <div class="page-header">
+          <div id="ad"></div>
+          <h1><a href=".">P2Pool Node Status</a> &gt; <span id="period"></span> Graphs</h1>
+
+          <b>
+            <small>
+              <span id='_node' class='hidden'>Node: </span>
+              <span id='node' class='hidden'></span><br/>
+              <span id='updated'></span>
+            </small>
+          </b>
+        </div>
+        
+          <div class="text-center">Periods: <span id="period_chooser"></span></div>
+          <div class="text-center">Current: <span id="period_current"></span></div>
+        
+          <div id="warnings"></div>
+        
+          <h2>Local rate</h2>
+          <svg id="local"></svg>
+        
+          <h2>Local rate reflected in shares</h2>
+          <svg id="local_shares"></svg>
+       
+          <h2>Pool rate</h2>
+          <svg id="pool"></svg>
+        
+          <h2>Peers</h2>
+          <svg id="peers"></svg>
+
+          <h2>Desired version rates</h2>
+          <svg id="desired_version_rates"></svg>
+        
+          <h2>Traffic rate</h2>
+          <svg id="traffic_rate"></svg>
+        
+          <h2>Bitcoind GetBlockTemplate Latency</h2>
+          <svg id="getwork_latency"></svg>
+        
+          <h2>Memory Usage</h2>
+          <svg id="memory_usage"></svg>
+      </div>  <!-- //container -->
+
+      <div id='footer'></div>
+
+      <script type="text/javascript" src="js/pages/graphs.js"></script>
+    </body>
+</html>

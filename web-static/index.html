@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <title>P2Pool Node Status</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <script type="text/javascript" src="d3.v2.min.js"></script>
+
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-dateFormat.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+
+    <script src="js/util.js"></script>
+    <script src="js/charts.js"></script>
+
+    <script src="js/config.json"></script>
+    <script src="js/init.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/p2pool-node-status.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+      <div id="header"></div>
+
+    <div class="container">
+      <div class="page-header">
+        <div id="ad"></div>
+        <h1><a href=".">P2Pool Node Status</a></h1>
+        <b>
+          <small>
+            <span id='_node' class='hidden'>Node: </span>
+            <span id='node' class='hidden'></span><br/>
+            <span id='updated'></span><br/>
+            <span>Audio notifications: </span>
+            <a href="#" onclick="toggleAudio();" id="audio-status"></a>
+          </small>
+        </b>
+      </div>
+
+      <div id='node_alerts' class="alert alert-warning hidden"></div>
+
+      <h3>Local Hashrate</h3>
+      <div>
+        <svg id="local"></svg>
+      </div>
+
+      <div style="width: 100%; text-align: right">
+        <a href="#" onclick="return updateGraph();"><img src="img/reload.png"/> Refresh graph</a> &nbsp;|&nbsp;
+        <a href="graphs.html">More graphs &raquo;</a>
+      </div>
+
+      <h4>P2Pool Status</h4>
+      <table id='status' class="table table-hover" border='0'>
+        <tr>
+          <td width='25%'>Local rate</td>
+          <td width='25%' class='text-right'><span id='local_rate'></span></td>
+          <td width='25%'>Recent shares</td>
+          <td width='25%' class='text-right'><span id='shares'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Global pool rate</td>
+          <td width='25%' class='text-right'><span id='global_rate'></span></td>
+          <td width='25%'>Share difficulty</td>
+          <td width='25%' class='text-right'><span id='share_difficulty'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Current block value</td>
+          <td width='25%' class='text-right'><button class="to_usd"><span id='block_value'></span></button></td>
+          <td width='25%'>Expected time to share</td>
+          <td width='25%' class='text-right'><span id='expected_time_to_share'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Total node payout if block found NOW</td>
+          <td width='25%' class='text-right'><button class="to_usd"><span id='payout_now'></span></button></td>
+          <td width='25%'>Expected time to block</td>
+          <td width='25%' class='text-right'><span id='expected_time_to_block'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Node peers</td>
+          <td width='25%' class='text-right'>
+            <img title="in" src="img/in.png"> <span id='peers_in'></span>
+            /
+            <span id='peers_out'></span> <img title="out" src="img/out.png">
+          </td>
+          <td width='25%'>Node uptime</td>
+          <td width='25%' class='text-right'><span id='node_uptime'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Node p2pool version</td>
+          <td width='25%' class='text-right'><a href="https://github.com/jramos/p2pool"><span id='p2pool_version'></span></a></td>
+          <td width='25%'>Protocol version</td>
+          <td width='25%' class='text-right'><span id='protocol_version'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Node efficiency</td>
+          <td width='25%' class='text-right'><span id='efficiency'></span></td>
+          <td width='25%'>Node getwork latency</td>
+          <td width='25%' class='text-right'><span id='node_latency'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Node fee</td>
+          <td width='25%' class='text-right'><span id='node_fee'></span></td>
+          <td width='25%'>Node donation</td>
+          <td width='25%' class='text-right'><span id='node_donation'></span></td>
+        </tr>
+      </table>
+
+      <h4>Bitcoin Status</h4>
+      <table id='bitcoind' class="table table-hover">
+        <tr>
+          <td width='25%'>Network rate</td>
+          <td width='25%' class='text-right'><span id='network_rate'></span></td>
+          <td width='25%'>Blocks</td>
+          <td width='25%' class='text-right'><span id='blocks'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Current block</td>
+          <td width='25%' class='text-right'><span id='current_block_size'></span> bytes / <span id='current_block_txs'></span> txs</td>
+          <td width='25%'>Block difficulty</td>
+          <td width='25%' class='text-right'><span id='block_difficulty'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Hashes to win</td>
+          <td width='25%' class='text-right'><span id='hashes_to_win'></span></td>
+          <td width='25%'>Block probability per GH</td>
+          <td width='25%' class='text-right'><span id='block_probability'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Total Bitcoins</td>
+          <td width='25%' class='text-right'><button class="to_usd"><span id='total_bitcoins'></span></button></td>
+          <td width='25%'>Expected time to block</td>
+          <td width='25%' class='text-right'><span id='block_eta'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Exchange rate</td>
+          <td width='25%' class='text-right'><button class="to_usd"><span data-value="1">1 BTC</span></td>
+          <td width='25%'>Block interval</td>
+          <td width='25%' class='text-right'><span id='block_interval'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Connections</td>
+          <td width='25%' class='text-right'>
+            <img title="in" src="img/in.png"/> <span id='bitcoind_connections_in'></span>
+            /
+            <span id='bitcoind_connections_out'></span> <img title="out" src="img/out.png">
+          </td>
+          <td width='25%'>Node uptime</td>
+          <td width='25%' class='text-right'><span id='bitcoind_uptime'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Node bitcoind version</td>
+          <td width='25%' class='text-right'><span id='bitcoind_version'></span></td>
+          <td width='25%'>Protocol version</td>
+          <td width='25%' class='text-right'><span id='bitcoind_protocol'></span></td>
+        </tr>
+        <tr>
+          <td width='25%'>Relay fee</td>
+          <td width='25%' class='text-right'><button class="to_usd"><span id='bitcoind_relay_fee'></span></button></td>
+          <td width='25%'>Peer latency</td>
+          <td width='25%' class='text-right'><span id='bitcoind_peer_latency'></span></td>
+        </tr>
+      </table>
+
+      <h4>Active Miners On This Node</h4>
+      <table id='active_miners' class="table table-hover">
+        <thead>
+          <th width='50%' class='text-left'>Bitcoin Address</th>
+          <th width='12%' class='text-right'>Hashrate</th>
+          <th width='12%' class='text-right'>DOA Hashrate</th>
+          <th width='12%' class='text-right'>DOA %</th>
+          <th width='14%' class='text-right'>Predicted payout</th>
+        </thead>
+      </table>
+
+      <h4>Recent Shares</h4>
+      <table id='recent_shares' class="table table-hover paginated">
+        <thead>
+          <th class="hidden">Timestamp</th>
+          <th>Date/Time</th>
+          <th>Hash</th>
+          <th>Found by</th>
+          <th class="text-center">State</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <h4>Recent Blocks</h4>
+      <table id='recent_blocks' class="table table-hover">
+        <tr>
+          <th>Date/Time</th>
+          <th>Number</th>
+          <th>Hash</th>
+          <th class="text-center">Confirmations</th>
+        </tr>
+      </table>
+    </div> <!-- /container -->
+
+    <div id='footer'></div>
+
+    <audio id="audio-newshare">
+        <source src="audio/newshare.mp3" type="audio/mp3" />
+    </audio>
+
+    <audio id="audio-newblock">
+        <source src="audio/newblock.mp3" type="audio/mp3" />
+    </audio>
+
+    <script type="text/javascript" src="js/pages/index.js"></script>
+  </body>
+</html>
