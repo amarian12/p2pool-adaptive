@@ -1,5 +1,4 @@
-from p2pool.coin import networks
-
+from p2pool.bitcoin import networks
 # CHAIN_LENGTH = number of shares back client keeps
 # REAL_CHAIN_LENGTH = maximum number of shares back client uses to compute payout
 # REAL_CHAIN_LENGTH must always be <= CHAIN_LENGTH

@@ -136,11 +136,12 @@ def get_web_root(wb, datadir_path, bitcoind_getinfo_var, stop_event=variable.Eve
         (stale_orphan_shares, stale_doa_shares), shares, _ = wb.get_stale_counts()
 
         unknown_shares = 0
+	miner_last_difficulties = {}
+
         for share_hash_str in wb.my_share_hashes:
             if share_hash_str not in node.tracker.items:
                 unknown_shares += 1
 
-				miner_last_difficulties = {}
         for addr in wb.last_work_shares.value:
             miner_last_difficulties[addr] = bitcoin_data.target_to_difficulty(wb.last_work_shares.value[addr].target)
         
