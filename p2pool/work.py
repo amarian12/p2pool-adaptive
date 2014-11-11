@@ -37,8 +37,8 @@ class WorkerBridge(worker_interface.WorkerBridge):
         self.removed_unstales_var = variable.Variable((0, 0, 0))
         self.removed_doa_unstales_var = variable.Variable(0)
         
-		self.last_work_shares = variable.Variable( {} )
-        
+        self.last_work_shares = variable.Variable( {} )
+
         self.my_share_hashes = set()
         self.my_doa_share_hashes = set()
         
