@@ -1,11 +1,11 @@
 from p2pool.bitcoin import networks
 
 PARENT = networks.nets['gamerscoin']
-SHARE_PERIOD = 15 # seconds target spacing
+SHARE_PERIOD = 10 # seconds target spacing
 CHAIN_LENGTH = 24*60*60//10 # shares
 REAL_CHAIN_LENGTH = 24*60*60//10 # shares
-TARGET_LOOKBEHIND = 200 # shares coinbase maturity
-SPREAD = 30 # blocks
+TARGET_LOOKBEHIND = 20 # shares coinbase maturity
+SPREAD = 60 # blocks
 IDENTIFIER = 'e1e1cacae0e0e1e1'.decode('hex')
 PREFIX = 'e1cafefe0e0fe1e1'.decode('hex')
 P2P_PORT = 29997
