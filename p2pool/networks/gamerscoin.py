@@ -13,6 +13,6 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1
 PERSIST = False
 WORKER_PORT = 8897
-BOOTSTRAP_ADDRS = 'p2pool.e-pool.net  '.split(' ')
+BOOTSTRAP_ADDRS = 'p2pool.e-pool.net:29997  gamecredits.p2p.0x0a.nl:40003'.split(' ')
 ANNOUNCE_CHANNEL = '#p2pool-alt'
 VERSION_CHECK = lambda v: True
